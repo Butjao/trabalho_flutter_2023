@@ -1,16 +1,14 @@
-# trabalho1
+TRABALHO LISTA DE AMIGOS 
+arquivo main: chama as rotas do arquivo routes dentro da pasta confs.
+pasta lib:
+  pasta confs: 
+    arquivo routes: rotas pra pagina home e pra pagina de adicionar contato.
 
-A new Flutter project.
+  pasta model:
+    arquivo contato: um aquivo que define a classe contato, com os campos nome, latitude e longiude.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  pasta page: 
+    arquivo contato: pagina com uma listagem de pessoas e coordenadas, se clicar encima da pessoa abre o mapa. botao adicionar contato leva pra paina cadastro.
+    arquivo cadastro_contato: formulario pra cadastro de nome e coordenadas chamando o modelo CONTATO da pasta model
+    arquivo mapa: um mapa que recebe o nome da pessoa, e as coordenadas setando-as como a posicao inicial e colocando um icone de marcador nela. 
+  
