@@ -10,7 +10,7 @@ class PageMapa extends StatefulWidget {
   final dynamic param;
 
   const PageMapa({
-    this.param,
+    this.param, //param é o contato que clicou
     Key? key,
   }) : super(key: key);
 
@@ -24,18 +24,18 @@ class PageMapaState extends State<PageMapa> {
 
   @override
   void initState() {
-    contato = widget.param;
+    contato = widget.param; //contato = param
 
     mapController = MapController(
       initMapWithUserPosition: false,
-      initPosition: GeoPoint(latitude: contato.lat, longitude: contato.lng),
+      initPosition: GeoPoint(latitude: contato.lat, longitude: contato.lng), //seta a posicao inicial pra latitude e longitude do contato
     );
 
     super.initState();
   }
 
   addMarker() {
-    mapController.addMarker(
+    mapController.addMarker( //coloca um marcador na posicao
       GeoPoint(latitude: contato.lat, longitude: contato.lng),
       markerIcon: MarkerIcon(
         icon: Icon(

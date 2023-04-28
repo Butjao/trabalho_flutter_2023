@@ -5,10 +5,10 @@ class PageCadastroContato extends StatefulWidget {
   const PageCadastroContato({super.key});
 
   @override
-  State<PageCadastroContato> createState() => _PageCadastroContatoState();
+  State<PageCadastroContato> createState() => _PageCadastroContatoState(); //estado da pagina
 }
 
-class _PageCadastroContatoState extends State<PageCadastroContato> {
+class _PageCadastroContatoState extends State<PageCadastroContato> { //pega os campos dos textos
   final _nomeController = TextEditingController();
   final _latController = TextEditingController();
   final _lngController = TextEditingController();
@@ -19,12 +19,12 @@ class _PageCadastroContatoState extends State<PageCadastroContato> {
       appBar: AppBar(
         title: const Text("Nova aula"),
         actions: [
-          IconButton(
+          IconButton( //botao de adicionar
             icon: const Icon(Icons.save_rounded),
             onPressed: () {
               Navigator.pop(
                 context,
-                Contato(
+                Contato( //cria um objeto da classe contato
                   nome: _nomeController.text,
                   lat: double.parse(_latController.text),
                   lng: double.parse(_lngController.text),
@@ -37,7 +37,7 @@ class _PageCadastroContatoState extends State<PageCadastroContato> {
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(children: [
-          TextFormField(
+          TextFormField( //formulario de nome
             controller: _nomeController,
             decoration: const InputDecoration(
               labelText: 'Nome',
@@ -47,7 +47,7 @@ class _PageCadastroContatoState extends State<PageCadastroContato> {
           const SizedBox(
             height: 8.0,
           ),
-          TextFormField(
+          TextFormField( //latitude
             controller: _latController,
             decoration: const InputDecoration(
               labelText: 'Latitude',
@@ -57,7 +57,7 @@ class _PageCadastroContatoState extends State<PageCadastroContato> {
           const SizedBox(
             height: 8.0,
           ),
-          TextFormField(
+          TextFormField( //longitude
             controller: _lngController,
             decoration: const InputDecoration(
               labelText: 'Longitude',

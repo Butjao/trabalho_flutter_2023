@@ -1,3 +1,4 @@
+// definicao da classe contato
 class Contato {
   final String nome;
   final double lat;

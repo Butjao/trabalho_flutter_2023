@@ -13,12 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter trabalho',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      // home: PageMapa(param: _listaContatoMock.first),
-      routes: routesOfApp,
+      routes: routesOfApp, //chama a pagina pela rota ali do confs
     );
   }
 }
